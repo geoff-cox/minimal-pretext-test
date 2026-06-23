@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <latex-image-preamble>
+    </latex-image-preamble>
+    <macros>
+    </macros>
+  </docinfo>
+
+  <article xml:id="shorttitlelowercase">
+    <title>The title of my groundbreaking paper</title>
+
+    <frontmatter xml:id="frontmatter">
+      <bibinfo>
+        <date>
+          <today />
+        </date>
+      </bibinfo>
+      <titlepage>
+        <titlepage-items/>
+      </titlepage>
+    </frontmatter>
+    
+    <introduction xml:id="intro">
+        <p>Some words before the first section of the paper</p>
+        <p>Some more words.</p>
+    </introduction>
+
+    <section xml:id="section-1">
+      <title>My First Section</title>
+      <p>Some more words</p>
+      <p>foo</p>
+      <p>Bar: <m>\foo</m></p>
+    </section>
+
+  </article>
+
+</pretext>
