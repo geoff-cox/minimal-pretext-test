@@ -1,57 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <!--
-	This is the publication file for a newly generated PreTeXt book. By changing the values of attributes here, 
-	you can change how the output looks and functions. For the complete documentation of publication-file options, 
-	see https://pretextbook.org/doc/guide/html/publisher-file-reference.html
+  preview_publication.ptx
+  Candidate preview-ONLY publication file for the PROTEUS question previewer.
+
+  Purpose: render ONE question as a single, self-contained, expanded HTML page
+  suitable for embedding. This is OUR file, independent of the cloned book's
+  publication file. (The preview build currently passes NO publication file at
+  all; core/pretext.py's manifest has no publication attribute, so this ADDS one
+  we control; it does not replace the book's.)
+
+  ===========================================================================
+  Targets the two quirks seen in the Stage-E render, plus the embed problem:
+
+  1. Multi-page split + index.html redirect stub
+     => set <platform portable="yes"/>
+     PreTeXt Guide 29.10 / 44.5.12: a single file (equivalent to chunking
+     level 0), NO index.html stub, and CSS/JS loaded from a CDN instead of a
+     local _static/ bundle (SVG/search inlined). The CDN part is the win: the
+     page becomes self-contained, so it embeds as a raw srcdoc string with no
+     asset serving at all.
+
+  2. Question born collapsed (must click the title to expand)
+     => set <knowl exercise-inline="no"/>
+     Inline exercises default to exercise-inline="yes" (born in a click-to-open
+     knowl); "no" presents them normally/expanded. (HYPOTHESIS for a bare
+     <cardsort> dropped into a section; confirm via the build. If it does not
+     un-collapse, the fix is likely wrapping the snippet in an <exercise> inside
+     assemble_standalone.)
+
+  ===========================================================================
+  Optional levers (toggle and rebuild to compare):
+
+    <css theme="boulder"/>          Masthead-free, PDF-like theme, good for an
+                                    embedded preview (Guide 29.10). Delete to
+                                    keep the default theme.
+    <tableofcontents level="0"/>    No table of contents (44.1.2). A one-question
+                                    page has nothing to navigate.
+
+  ===========================================================================
+  CAVEAT (Guide 29.10): some interactive elements load via an iframe HTML file
+  that portable mode CANNOT inline. A live cardsort widget may therefore fail to
+  initialize in a pure single-file embed; the static question (premises/zones
+  plus typeset math) should still render, which is what a coder needs. If we
+  require the live widget, drop @portable and instead serve the build dir
+  (chunking level 0 with a served _static/ bundle).
+
+  TODO when wiring SA: suppress solutions/answers declaratively via
+  exercise-component-visibility (Guide 26.4 / 44.1.3) so an authored <solution>
+  cannot leak into the preview. Left out here to keep this file verified-only;
+  for a <cardsort> it is moot.
 -->
-
 <publication>
-
 	<source>
 		<directories external="../../assets" generated="../../generated-assets" />
-		<version include="ref-page html" />
+		<version include="proteus" />
 	</source>
-`
-	<common>
-		<!-- Level at which are html files generated (chapter/section/etc) -->
+  <common>
 		<chunking level="0" />
 		<tableofcontents level="0" />
-		<!-- Visibility of exercise components where they first appear -->
-		<exercise-inline     statement="yes" hint="yes" answer="yes" solution="yes" />
-		<exercise-divisional statement="yes" hint="yes" answer="yes" solution="yes" />
-		<exercise-worksheet  statement="yes" hint="yes" answer="yes" solution="yes" />
-		<exercise-reading    statement="yes" hint="yes" answer="yes" solution="yes" />
-		<exercise-project    statement="yes" hint="yes" answer="yes" solution="yes" />
 		<fillin textstyle="underline" mathstyle="shade" />
-		<mermaid theme="default" />
-	</common>
-
-	<numbering>
-		<divisions chapter-start="1" level="2" />
-		<blocks		level="1" />
-		<projects	level="1" />
-		<equations	level="1" />
-		<footnotes	level="1" />
-	</numbering>
-
-	<!-- @short-answer-responses={"always","graded"} -->
-	<html short-answer-responses="always">
-		<baseurl href="vmi.instructure.com"/>
-		<platform host="web"/>
-		<knowl
-			audio="no"
-			theorem="no"
-			proof="no"
-			definition="no"
+  </common>
+  <html>
+    <platform portable="yes"/>
+    <knowl 
 			example="no"
 			example-solution="no"
 			project="no"
 			task="no"
-			remark="no"
-			objectives="no"
-			outcomes="no"
-			assemblage="no"
 			figure="no"
 			table="no"
 			listing="no"
@@ -61,91 +76,12 @@
 			exercise-divisional="no"
 			exercise-worksheet="no"
 			exercise-readingquestion="no"
-		/>
-
-		<!--
-			Specify the style of the html by giving names to override defaults.
-			Ex: to use "style_oscarlevin.css" put <css style="oscarlevin"/>
-			See also
-			https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options
-			Themes: 
-				"default"
-				"oscarlevin"
-				"custom"
-				"denver"
-				"salem"
-				"tacoma"
-				"greeley"
-
-			Palettes:
-				"earth-sea"
-			palette="earth-sea"
-		-->
-
-    	<!-- <css
-			theme="oscarlevin"
-			colors="blue_red"
-			knowls="crc"
-			toc="crc"
-			banner="crc"
-			navbar="crc"
-		/> -->
+    />
+    <css theme="boulder"/>
 		<search variant="none" />
 		<toc focused="no" />
 		<navigation logic="linear" upbutton="no" />
 		<cross-references knowled="never" />
 		<calculator model="none" activecode="none" />
-
-		<!--
-			Control behavior of online WeBWorK
-		-->
-		<webwork
-			inline			=	"dynamic"
-			divisional	    =	"dynamic"
-			reading			=	"dynamic"
-			worksheet		=	"static"
-			project			=	"dynamic"
-		/>
-
-		<!--
-			Use the tabbed viewer for tasks in exercises. 
-			@tabbed-tasks={"project", "reading", "inline divisional"}
-			@task-reveal={"show", "answer", "solution"}
-		-->
-		<exercises tabbed-tasks="project reading inline divisional" task-reveal="solution"/>
-
-		<!--
-			@privacy={"yes,"no"} "yes" disables certain tracking cookies for embedded videos.
-		-->
-		<audio privacy="yes"/>
-
-		<!--
-			Asymptote Click to Enlarge links
-		-->
-		<asymptote links="yes"/>
-
-		<!--
-			Magic IDs identify HTML pages to analytics services. Presence implies relevant Javascript 
-			will be added StatCounter requires both values to be set
-		-->
-		<!-- <analytics
-			google-gst="UA-0123456-1"
-			statcounter-project="0123456"
-			statcounter-security="0123456"
-		/> -->
-
-	</html>
-
-	<epub>
-		<!-- The cover tag can have a @front attribute to specify a cover image. -->
-		<!-- <cover front="cover.jpg"> -->
-	</epub>
-
-	<!-- To use WeBWorK, you need a server. -->
-	<webwork server="https://webwork-ptx.aimath.org" />
-	<!--
-		@course, @coursepassword, @user, and @userpassword can also be set. 
-		You can also set how tasks are revealed for webwork problems using the @task-reveal attribute on the above
-	-->
-
+  </html>
 </publication>
