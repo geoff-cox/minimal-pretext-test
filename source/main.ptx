@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
+<!-- 
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="bookinfo.xml" />
 
   <article>
     <title>Question Previewer</title>
@@ -7,30 +10,106 @@
     <section>
       <title>TITLE</title>
 
-      <exercise xml:id="proteus-5-3-matching-1" label="proteus-5-3-matching-1">
-        <title>Composition Matching</title>
-        
+      <exercise component="proteus"
+                label="ula-proteus-2-2-algprop-v1">
+        <title>Algebraic properties of matrix multiplication</title>
+
         <statement>
           <p>
-            <md>
-              2 (2x+5)^7 = f(g(x)) g'(x)
-            </md>
-            Drag the cards from the left column into the correct labels in the right column.
+            Suppose <m>b</m> and <m>c</m> are scalars, <m>\vvec,
+            \wvec</m> are vectors in
+            <m>\real^5</m>, and <m>A</m> is a <m>5\times 5</m>
+            matrix.
+            Determine whether each of the following algebraic
+            properties is Always True, Never True, or Sometimes True.
           </p>
-        </statement>
-
+        </statement> 
         <cardsort>
           <match>
-            <premise><m>2x+5</m></premise>
-            <response>Inner function <m>g(x)</m></response>
+            <response>Always True</response>
+            <premise order="7"><m>A(b\vvec +c\wvec)=bA\vvec +
+            cA\wvec</m></premise> 
+            <premise order="1"><m>A\zerovec=\zerovec</m></premise>
+            <premise order="5"><m>(a+b)\vvec=a\vvec+b\vvec</m></premise>
+            <premise order="4"><m>A(b\vvec)=bA\vvec</m></premise>
+            <premise order="8"><m>I\vvec=\vvec</m> where <m>I</m> is the
+            <m>5\times5</m> identity</premise>
+            <premise order="2"><m>0\vvec=\zerovec</m></premise>
           </match>
           <match>
-            <premise><m>2</m></premise>
-            <response>Derivative of inner function <m>g'(x)</m></response>
+            <response>Never True</response>
+            <premise order="6"><m>A\vvec=\vvec A</m></premise>
+            <premise order="10"><p>If <m>A\vvec=3\vvec</m>, then
+            <m>A=3</m>.</p></premise> 
           </match>
           <match>
-            <premise><m>x^7</m></premise>
-            <response>Outer function <m>f(x)</m></response>
+            <response>Sometimes True</response>
+            <premise order="9"><p>If <m>A\vvec=A\wvec</m>, then
+            <m>\vvec=\wvec</m>.</p></premise> 
+            <premise order="3"><p>If <m>A\vvec=\zerovec</m>, then
+            <m>\vvec=\zerovec</m>.</p></premise> 
+          </match>
+        </cardsort>
+      </exercise>
+    </section>
+
+  </article>
+
+</pretext> -->
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <macros>
+      \newcommand{\vvec}{{\mathbf v}}
+      \newcommand{\wvec}{{\mathbf w}}
+    </macros>
+  </docinfo>
+
+  <article>
+    <title>Question Previewer</title>
+    
+    <section>
+      <title>TITLE</title>
+
+      <exercise component="proteus"
+                label="ula-proteus-2-2-algprop-v1">
+        <title>Algebraic properties of matrix multiplication</title>
+
+        <statement>
+          <p>
+            Suppose <m>b</m> and <m>c</m> are scalars, <m>\vvec,
+            \wvec</m> are vectors in
+            <m>\real^5</m>, and <m>A</m> is a <m>5\times 5</m>
+            matrix.
+            Determine whether each of the following algebraic
+            properties is Always True, Never True, or Sometimes True.
+          </p>
+        </statement> 
+        <cardsort>
+          <match>
+            <response>Always True</response>
+            <premise order="7"><m>A(b\vvec +c\wvec)=bA\vvec +
+            cA\wvec</m></premise> 
+            <premise order="1"><m>A\zerovec=\zerovec</m></premise>
+            <premise order="5"><m>(a+b)\vvec=a\vvec+b\vvec</m></premise>
+            <premise order="4"><m>A(b\vvec)=bA\vvec</m></premise>
+            <premise order="8"><m>I\vvec=\vvec</m> where <m>I</m> is the
+            <m>5\times5</m> identity</premise>
+            <premise order="2"><m>0\vvec=\zerovec</m></premise>
+          </match>
+          <match>
+            <response>Never True</response>
+            <premise order="6"><m>A\vvec=\vvec A</m></premise>
+            <premise order="10"><p>If <m>A\vvec=3\vvec</m>, then
+            <m>A=3</m>.</p></premise> 
+          </match>
+          <match>
+            <response>Sometimes True</response>
+            <premise order="9"><p>If <m>A\vvec=A\wvec</m>, then
+            <m>\vvec=\wvec</m>.</p></premise> 
+            <premise order="3"><p>If <m>A\vvec=\zerovec</m>, then
+            <m>\vvec=\zerovec</m>.</p></premise> 
           </match>
         </cardsort>
       </exercise>

@@ -52,7 +52,11 @@
 -->
 <publication>
 	<source>
-		<directories external="../../assets" generated="../../generated-assets" />
+		<!-- PR #69: pretext 2.42 hard-fails without @external/@generated. These
+		     point at empty dirs the build harness/core create at the project
+		     root (siblings of project.ptx, NOT inside source/); the prototype's
+		     book-relative ../../assets paths do not resolve in a scratch build. -->
+		<directories external="assets" generated="generated-assets" />
 		<version include="proteus" />
 	</source>
   <common>
