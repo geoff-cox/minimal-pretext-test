@@ -1,5 +1,4 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!-- 
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <xi:include href="bookinfo.xml" />
@@ -8,7 +7,7 @@
     <title>Question Previewer</title>
     
     <section>
-      <title>TITLE</title>
+      <title>Question Preview</title>
 
       <exercise component="proteus"
                 label="ula-proteus-2-2-algprop-v1">
@@ -27,92 +26,116 @@
         <cardsort>
           <match>
             <response>Always True</response>
-            <premise order="7"><m>A(b\vvec +c\wvec)=bA\vvec +
-            cA\wvec</m></premise> 
+            <premise order="7"><m>A(b\vvec +c\wvec)=bA\vvec + cA\wvec</m></premise> 
             <premise order="1"><m>A\zerovec=\zerovec</m></premise>
             <premise order="5"><m>(a+b)\vvec=a\vvec+b\vvec</m></premise>
             <premise order="4"><m>A(b\vvec)=bA\vvec</m></premise>
-            <premise order="8"><m>I\vvec=\vvec</m> where <m>I</m> is the
-            <m>5\times5</m> identity</premise>
+            <premise order="8"><m>I\vvec=\vvec</m> where <m>I</m> is the <m>5\times5</m> identity</premise>
             <premise order="2"><m>0\vvec=\zerovec</m></premise>
           </match>
           <match>
             <response>Never True</response>
             <premise order="6"><m>A\vvec=\vvec A</m></premise>
-            <premise order="10"><p>If <m>A\vvec=3\vvec</m>, then
-            <m>A=3</m>.</p></premise> 
+            <premise order="10"><p>If <m>A\vvec=3\vvec</m>, then <m>A=3</m>.</p></premise> 
           </match>
           <match>
             <response>Sometimes True</response>
-            <premise order="9"><p>If <m>A\vvec=A\wvec</m>, then
-            <m>\vvec=\wvec</m>.</p></premise> 
-            <premise order="3"><p>If <m>A\vvec=\zerovec</m>, then
-            <m>\vvec=\zerovec</m>.</p></premise> 
+            <premise order="9"><p>If <m>A\vvec=A\wvec</m>, then <m>\vvec=\wvec</m>.</p></premise> 
+            <premise order="3"><p>If <m>A\vvec=\zerovec</m>, then <m>\vvec=\zerovec</m>.</p></premise> 
           </match>
         </cardsort>
       </exercise>
     </section>
 
-  </article>
-
-</pretext> -->
-
-<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
-
-  <docinfo>
-    <macros>
-      \newcommand{\vvec}{{\mathbf v}}
-      \newcommand{\wvec}{{\mathbf w}}
-    </macros>
-  </docinfo>
-
-  <article>
-    <title>Question Previewer</title>
-    
     <section>
-      <title>TITLE</title>
+      <title>Question Legend</title>
 
-      <exercise component="proteus"
-                label="ula-proteus-2-2-algprop-v1">
-        <title>Algebraic properties of matrix multiplication</title>
+      <table>
+        <title>Zones (<c>Z#-d</c> <em>are decoy zones</em>)</title>
+        <tabular>
+          <row>
+            <cell><c>Z0</c></cell>
+            <cell>Tray</cell>
+          </row>
+          <row>
+            <cell><c>Z1</c></cell>
+            <cell>Always True</cell>
+          </row>
+          <row>
+            <cell><c>Z2</c></cell>
+            <cell>Never True</cell>
+          </row>
+          <row>
+            <cell><c>Z3</c></cell>
+            <cell>Sometimes True</cell>
+          </row>
+        </tabular>
+      </table>
 
-        <statement>
-          <p>
-            Suppose <m>b</m> and <m>c</m> are scalars, <m>\vvec,
-            \wvec</m> are vectors in
-            <m>\real^5</m>, and <m>A</m> is a <m>5\times 5</m>
-            matrix.
-            Determine whether each of the following algebraic
-            properties is Always True, Never True, or Sometimes True.
-          </p>
-        </statement> 
-        <cardsort>
-          <match>
-            <response>Always True</response>
-            <premise order="7"><m>A(b\vvec +c\wvec)=bA\vvec +
-            cA\wvec</m></premise> 
-            <premise order="1"><m>A\zerovec=\zerovec</m></premise>
-            <premise order="5"><m>(a+b)\vvec=a\vvec+b\vvec</m></premise>
-            <premise order="4"><m>A(b\vvec)=bA\vvec</m></premise>
-            <premise order="8"><m>I\vvec=\vvec</m> where <m>I</m> is the
-            <m>5\times5</m> identity</premise>
-            <premise order="2"><m>0\vvec=\zerovec</m></premise>
-          </match>
-          <match>
-            <response>Never True</response>
-            <premise order="6"><m>A\vvec=\vvec A</m></premise>
-            <premise order="10"><p>If <m>A\vvec=3\vvec</m>, then
-            <m>A=3</m>.</p></premise> 
-          </match>
-          <match>
-            <response>Sometimes True</response>
-            <premise order="9"><p>If <m>A\vvec=A\wvec</m>, then
-            <m>\vvec=\wvec</m>.</p></premise> 
-            <premise order="3"><p>If <m>A\vvec=\zerovec</m>, then
-            <m>\vvec=\zerovec</m>.</p></premise> 
-          </match>
-        </cardsort>
-      </exercise>
+      <table>
+        <title>Cards (<c>C#-0</c> <em>are decoy cards</em>)</title>
+        <tabular halign="center">
+          <col width="12%"/>
+          <col width="76%"/>
+          <col width="12%"/>
+          <row bottom="minor">
+            <cell><p>Label</p></cell>
+            <cell><p>Card</p></cell>
+            <cell><p>Home</p></cell>
+          </row>
+          <row>
+            <cell><p><c>C1-1</c></p></cell>
+            <cell><p><m>A(b\vvec +c\wvec)=bA\vvec + cA\wvec</m></p></cell>
+            <cell><p><c>Z1</c></p></cell>
+          </row>
+          <row>
+            <cell><p><c>C2-1</c></p></cell>
+            <cell><p><m>A\zerovec=\zerovec</m></p></cell>
+            <cell><p><c>Z1</c></p></cell>
+          </row>
+          <row>
+            <cell><p><c>C3-1</c></p></cell>
+            <cell><p><m>(a+b)\vvec=a\vvec+b\vvec</m></p></cell>
+            <cell><p><c>Z1</c></p></cell>
+          </row>
+          <row>
+            <cell><p><c>C4-1</c></p></cell>
+            <cell><p><m>A(b\vvec)=bA\vvec</m></p></cell>
+            <cell><p><c>Z1</c></p></cell>
+          </row>
+          <row>
+            <cell><p><c>C5-1</c></p></cell>
+            <cell><p><m>I\vvec=\vvec</m> where <m>I</m> is the <m>5\times5</m> identity</p></cell>
+            <cell><p><c>Z1</c></p></cell>
+          </row>
+          <row>
+            <cell><p><c>C6-1</c></p></cell>
+            <cell><p><m>0\vvec=\zerovec</m></p></cell>
+            <cell><p><c>Z1</c></p></cell>
+          </row>
+          <row>
+            <cell><p><c>C7-2</c></p></cell>
+            <cell><p><m>A\vvec=\vvec A</m></p></cell>
+            <cell><p><c>Z2</c></p></cell>
+          </row>
+          <row>
+            <cell><p><c>C8-2</c></p></cell>
+            <cell><p>If <m>A\vvec=3\vvec</m>, then <m>A=3</m>.</p></cell>
+            <cell><p><c>Z2</c></p></cell>
+          </row>
+          <row>
+            <cell><p><c>C9-3</c></p></cell>
+            <cell><p>If <m>A\vvec=A\wvec</m>, then <m>\vvec=\wvec</m>.</p></cell>
+            <cell><p><c>Z3</c></p></cell>
+          </row>
+          <row>
+            <cell><p><c>C10-3</c></p></cell>
+            <cell><p>If <m>A\vvec=\zerovec</m>, then <m>\vvec=\zerovec</m>.</p></cell>
+            <cell><p><c>Z3</c></p></cell>
+          </row>
+        </tabular>
+      </table>
+
     </section>
 
   </article>
