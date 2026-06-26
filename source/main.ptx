@@ -52,7 +52,7 @@
 
       <table>
         <title>Zones (<c>Z#-d</c> <em>are decoy zones</em>)</title>
-        <tabular>
+        <tabular halign="center" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
           <row>
             <cell><c>Z0</c></cell>
             <cell>Tray</cell>
@@ -74,11 +74,11 @@
 
       <table>
         <title>Cards (<c>C#-0</c> <em>are decoy cards</em>)</title>
-        <tabular halign="center">
+        <tabular halign="center" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
           <col width="12%"/>
           <col width="76%"/>
           <col width="12%"/>
-          <row bottom="minor">
+          <row header="yes">
             <cell><p>Label</p></cell>
             <cell><p>Card</p></cell>
             <cell><p>Home</p></cell>
@@ -133,6 +133,7 @@
             <cell><p>If <m>A\vvec=\zerovec</m>, then <m>\vvec=\zerovec</m>.</p></cell>
             <cell><p><c>Z3</c></p></cell>
           </row>
+          <row left="none"><cell right="none" bottom="none"><p><md/></p></cell></row>
         </tabular>
       </table>
 
