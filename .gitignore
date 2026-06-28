@@ -1,3 +1,4 @@
 logs
 output
 .cache
+.error_schema.log

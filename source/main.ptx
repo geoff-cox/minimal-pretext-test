@@ -50,92 +50,95 @@
     <section>
       <title>Question Legend</title>
 
-      <table>
-        <title>Zones (<c>Z#-d</c> <em>are decoy zones</em>)</title>
-        <tabular halign="center" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
-          <row>
-            <cell><c>Z0</c></cell>
-            <cell>Tray</cell>
-          </row>
-          <row>
-            <cell><c>Z1</c></cell>
-            <cell>Always True</cell>
-          </row>
-          <row>
-            <cell><c>Z2</c></cell>
-            <cell>Never True</cell>
-          </row>
-          <row>
-            <cell><c>Z3</c></cell>
-            <cell>Sometimes True</cell>
-          </row>
-        </tabular>
-      </table>
+      <sidebyside>
+        <table>
+          <title>Zones (<c>Z#-d</c> <em>are decoy zones</em>)</title>
+          <tabular halign="center" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
+            <row>
+              <cell><c>Z0</c></cell>
+              <cell>Tray</cell>
+            </row>
+            <row>
+              <cell><c>Z1</c></cell>
+              <cell>Always True</cell>
+            </row>
+            <row>
+              <cell><c>Z2</c></cell>
+              <cell>Never True</cell>
+            </row>
+            <row>
+              <cell><c>Z3</c></cell>
+              <cell>Sometimes True</cell>
+            </row>
+          </tabular>
+        </table>
 
-      <table>
-        <title>Cards (<c>C#-0</c> <em>are decoy cards</em>)</title>
-        <tabular halign="center" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
-          <col width="12%"/>
-          <col width="76%"/>
-          <col width="12%"/>
-          <row header="yes">
-            <cell><p>Label</p></cell>
-            <cell><p>Card</p></cell>
-            <cell><p>Home</p></cell>
-          </row>
-          <row>
-            <cell><p><c>C1-1</c></p></cell>
-            <cell><p><m>A(b\vvec +c\wvec)=bA\vvec + cA\wvec</m></p></cell>
-            <cell><p><c>Z1</c></p></cell>
-          </row>
-          <row>
-            <cell><p><c>C2-1</c></p></cell>
-            <cell><p><m>A\zerovec=\zerovec</m></p></cell>
-            <cell><p><c>Z1</c></p></cell>
-          </row>
-          <row>
-            <cell><p><c>C3-1</c></p></cell>
-            <cell><p><m>(a+b)\vvec=a\vvec+b\vvec</m></p></cell>
-            <cell><p><c>Z1</c></p></cell>
-          </row>
-          <row>
-            <cell><p><c>C4-1</c></p></cell>
-            <cell><p><m>A(b\vvec)=bA\vvec</m></p></cell>
-            <cell><p><c>Z1</c></p></cell>
-          </row>
-          <row>
-            <cell><p><c>C5-1</c></p></cell>
-            <cell><p><m>I\vvec=\vvec</m> where <m>I</m> is the <m>5\times5</m> identity</p></cell>
-            <cell><p><c>Z1</c></p></cell>
-          </row>
-          <row>
-            <cell><p><c>C6-1</c></p></cell>
-            <cell><p><m>0\vvec=\zerovec</m></p></cell>
-            <cell><p><c>Z1</c></p></cell>
-          </row>
-          <row>
-            <cell><p><c>C7-2</c></p></cell>
-            <cell><p><m>A\vvec=\vvec A</m></p></cell>
-            <cell><p><c>Z2</c></p></cell>
-          </row>
-          <row>
-            <cell><p><c>C8-2</c></p></cell>
-            <cell><p>If <m>A\vvec=3\vvec</m>, then <m>A=3</m>.</p></cell>
-            <cell><p><c>Z2</c></p></cell>
-          </row>
-          <row>
-            <cell><p><c>C9-3</c></p></cell>
-            <cell><p>If <m>A\vvec=A\wvec</m>, then <m>\vvec=\wvec</m>.</p></cell>
-            <cell><p><c>Z3</c></p></cell>
-          </row>
-          <row>
-            <cell><p><c>C10-3</c></p></cell>
-            <cell><p>If <m>A\vvec=\zerovec</m>, then <m>\vvec=\zerovec</m>.</p></cell>
-            <cell><p><c>Z3</c></p></cell>
-          </row>
-          <row left="none"><cell right="none" bottom="none"><p><md/></p></cell></row>
-        </tabular>
-      </table>
+        <table>
+          <title>Cards (<c>C#-0</c> <em>are decoy cards</em>)</title>
+          <tabular halign="center" valign="middle" top="minor" bottom="minor" left="minor" right="minor">
+            <col width="12%"/>
+            <col width="76%"/>
+            <col width="12%"/>
+            <row header="yes">
+              <cell><p>Label</p></cell>
+              <cell><p>Card</p></cell>
+              <cell><p>Home</p></cell>
+            </row>
+            <row>
+              <cell><p><c>C1-1</c></p></cell>
+              <cell><p><m>A(b\vvec +c\wvec)=bA\vvec + cA\wvec</m></p></cell>
+              <cell><p><c>Z1</c></p></cell>
+            </row>
+            <row>
+              <cell><p><c>C2-1</c></p></cell>
+              <cell><p><m>A\zerovec=\zerovec</m></p></cell>
+              <cell><p><c>Z1</c></p></cell>
+            </row>
+            <row>
+              <cell><p><c>C3-1</c></p></cell>
+              <cell><p><m>(a+b)\vvec=a\vvec+b\vvec</m></p></cell>
+              <cell><p><c>Z1</c></p></cell>
+            </row>
+            <row>
+              <cell><p><c>C4-1</c></p></cell>
+              <cell><p><m>A(b\vvec)=bA\vvec</m></p></cell>
+              <cell><p><c>Z1</c></p></cell>
+            </row>
+            <row>
+              <cell><p><c>C5-1</c></p></cell>
+              <cell><p><m>I\vvec=\vvec</m> where <m>I</m> is the <m>5\times5</m> identity</p></cell>
+              <cell><p><c>Z1</c></p></cell>
+            </row>
+            <row>
+              <cell><p><c>C6-1</c></p></cell>
+              <cell><p><m>0\vvec=\zerovec</m></p></cell>
+              <cell><p><c>Z1</c></p></cell>
+            </row>
+            <row>
+              <cell><p><c>C7-2</c></p></cell>
+              <cell><p><m>A\vvec=\vvec A</m></p></cell>
+              <cell><p><c>Z2</c></p></cell>
+            </row>
+            <row>
+              <cell><p><c>C8-2</c></p></cell>
+              <cell><p>If <m>A\vvec=3\vvec</m>, then <m>A=3</m>.</p></cell>
+              <cell><p><c>Z2</c></p></cell>
+            </row>
+            <row>
+              <cell><p><c>C9-3</c></p></cell>
+              <cell><p>If <m>A\vvec=A\wvec</m>, then <m>\vvec=\wvec</m>.</p></cell>
+              <cell><p><c>Z3</c></p></cell>
+            </row>
+            <row>
+              <cell><p><c>C10-3</c></p></cell>
+              <cell><p>If <m>A\vvec=\zerovec</m>, then <m>\vvec=\zerovec</m>.</p></cell>
+              <cell><p><c>Z3</c></p></cell>
+            </row>
+            <row left="none"><cell right="none" bottom="none"><p><md/></p></cell></row>
+          </tabular>
+        </table>
+      </sidebyside>
+
 
     </section>
 
